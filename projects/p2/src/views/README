@@ -1,0 +1,36 @@
+*********** OPTIMIZATIONS MADE IN views/js/main.js for pizza.html *************
+
+To increase the FPS to 60 for the moving pizzas the following changes were made:
+	>To function updatePositions():
+		-phase variable moved out of loop and placed in a smaller loop that only assigns the 5 possible values for it (reduces uneeded calculations)
+		-document.body.scrollTop calculation assigned to a variable and taken out of the loop (this value only needs to be calculated once per update)
+		-offset variable added that takes into account the shift in pizzas after optimization
+		-items.style.left replaced by transform:translate3d (transform does not invoke layout or paint changes and is less expensive than left)
+		-requestAnimationFrame(updatePositions) added to end of update function for increased performance (allows the browser to choose when to animate frames)
+
+	>To function called on DOMContentLoad
+		-Decreased the amount of sliding pizzas when loading from 200 to 50 (trim the fat and eliminate exorbitant amount of pizza elements that would never bee rendered)
+		-Assign all mover pizzas to the items array (so that this is only done once per load, instead of every update)
+
+	>Added function containerSize
+		-Takes into account media queries from CSS to determine the width of the container that holds the pizzas
+		-Done to eliminate the need to access offsetWidth which invokes forced synchronous layout
+		-If the media queries that control the width of the .container are changed then the values here need to be altered appropriately
+
+	>Added function percentOrPixel
+		-Reads the CSS width value and outputs a usable form of the value
+		-Can deal with percent values as well as pixel values
+		-returns width of pizza div in pixels
+		-done to avoid the need to call offsetWidth which invokes forced synchronous layout
+
+	>To function determineDx
+		-calls to offsetWidth are replaced with the newly created functions that do the same calculation (percentOrPixel and containerSize)
+		-window.innerWidth fed to function containerSize (innerWidth gives the inner window value which corresponds to a media query that sets the width of the container class)
+
+	>To changePizzaSizes
+		-variables dx and newwidth are taken out of the loop as they only need to be calculated once per size change
+		-newwwidth calculated with percentOrPixel instead of offsetWidth to avoid forced synchronous layout
+	
+	>To css/style.css
+		- .randomPizzaContainer assigned a non-default width value of 100% to avoid trigger layout, painting, and compositing
+		- .mover class assigned value for "backface-visibilty: hidden" forcing each moving pizza to have its own composite layer, reducing paint time significantly
