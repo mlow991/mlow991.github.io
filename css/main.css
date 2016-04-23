@@ -1,1 +1,255 @@
-*{-ms-box-sizing:border-box;box-sizing:border-box;font-family:Oxygen,sans-serif}embed,img,object,video{max-width:100%}body{margin-left:10px;margin-right:10px}h1{font-size:calc(2vw + 36px)}h2{font-size:calc(1vmin + 18px)}h3{font-size:24px}h4{text-align:center;font-size:25px;margin:0}hr{border:2px solid gray}.ghub{width:75px}.proj-caption{margin-top:10px;margin-bottom:30px}.border{border:2px solid #000}.underline{border-bottom:2px solid #000}.head-image{max-height:28vw;margin-top:15px}.blurb{margin:0;width:100%;display:none}.marg-auto{margin-left:auto;margin-right:auto}.project{margin-top:10px;margin-bottom:10px}.proj-image{margin:auto;width:75%}.proj-snippet{display:none;width:50%;padding-left:5vw}.marg-ten{margin:10px 0}.left{text-align:left}.right{text-align:right}.center{text-align:center}.container{width:100%;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.col-1{width:8.33%}.col-2{width:16.66%}.col-3{width:25%}.col-4{width:33.33%}.col-5{width:41.66%}.col-6{width:50%}.col-7{width:58.33%}.col-8{width:66.66%}.col-9{width:75%}.col-10{width:83.33%}.col-11{width:91.66%}.col-12{width:100%}@media screen and (max-width:359px){.h-image-box{width:0}.h-text-box{width:100%}.head-image{display:none}}@media screen and (min-width:360px) and (max-width:484px){h1{font-size:12vw}h2{font-size:6vw}}@media screen and (min-width:485px) and (max-width:599px){h1{font-size:63px}h2{font-size:30px}h3{font-size:26px}}@media screen and (min-width:600px) and (max-width:729px){h1{font-size:65px}h2{font-size:32px}h3{font-size:28px}}@media screen and (min-width:730px){.proj-image{width:50%}.proj-snippet{display:block}.proj-caption{display:none}h1{font-size:65px}h2{font-size:32px}h3{font-size:30px}}@media screen and (min-width:850px){.blurb{display:block}}@media screen and (min-width:1050px){body{max-width:1000px;margin:auto}}
+* {
+//	border: 1px solid red !important;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+* {
+	font-family: 'Oxygen', sans-serif;
+}
+
+/*Catch all for these common elements that need to be scaled relative to sceen size*/
+img, embed, object, video {
+	max-width: 100%;
+}
+
+body {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+h1 {
+	font-size: calc(2vw + 36px);
+}
+
+h2 {
+	font-size: calc(1vmin + 18px);
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	text-align: center;
+	font-size: 25px;
+	margin: 0;
+}
+
+hr {
+	border: 2px solid gray;
+}
+
+.ghub {
+	width: 75px;
+}
+
+.proj-caption {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.border {
+	border: 2px solid black;
+}
+
+.underline {
+	border-bottom: 2px solid black;
+}
+
+.head-image {
+	max-height: 28vw;
+	margin-top: 15px;
+}
+
+.blurb {
+	margin: 0;
+	width: 100%;
+	display: none;
+}
+
+.marg-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.project {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.proj-image {
+	margin: auto;
+	width: 75%;
+}
+
+.proj-snippet {
+	display: none;
+	width: 50%;
+	padding-left: 5vw;
+}
+
+.marg-ten {
+	margin: 10px 0;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+@media screen and (max-width: 359px) {
+	.h-image-box {
+		width: 0;
+	}
+
+	.h-text-box {
+		width: 100%;
+	}
+
+	.head-image {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 360px) and (max-width: 484px) {
+	h1 {
+		font-size: 12vw;
+	}
+
+	h2 {
+		font-size: 6vw;
+	}
+}
+
+@media screen and (min-width: 485px) and (max-width: 599px) {
+	h1 {
+		font-size: 63px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 729px) {
+	h1 {
+		font-size: 65px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+}
+
+@media screen and (min-width: 730px) {
+	.proj-image {
+		width: 50%;
+	}
+
+	.proj-snippet {
+		display: block;
+	}
+
+	.proj-caption {
+		display: none;
+	}
+
+	h1 {
+		font-size: 65px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	.blurb {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1050px) {
+	body {
+		max-width: 1000px;
+		margin: auto;
+	}
+}
