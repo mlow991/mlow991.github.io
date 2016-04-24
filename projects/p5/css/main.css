@@ -1,4 +1,4 @@
-.num-warning, .range-warning, .zero-range-warning {
+.num-warning, .num-warning-two, .num-amount, .range-warning, .zero-range-warning {
 	color: red;
 	margin-left: 20px;
 	display: none;
