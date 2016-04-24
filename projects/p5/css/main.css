@@ -1,0 +1,5 @@
+.num-warning, .range-warning, .zero-range-warning {
+	color: red;
+	margin-left: 20px;
+	display: none;
+}
