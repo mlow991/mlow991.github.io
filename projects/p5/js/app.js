@@ -42,10 +42,14 @@ $(document).ready(function() {
 			});
 			console.log(range);
 			var arr = [];
-			for(i = range[0]; i < range[1]; i++) {
-				arr.push(i);
+			var total = 0;
+			for(i = range[0]; i < range[1] / number; i++) {
+				var val = i * 3;
+				arr.push(val);
+				total += val;
 			}
 			console.log(arr);
+			console.log(total);
 
 		}
 	});
