@@ -13,6 +13,10 @@
 	display: none;
 }
 
+#calc, #add, .readme {
+	cursor: pointer;
+}
+
 p {
 	text-indent: 20px;
 }
@@ -21,6 +25,15 @@ body {
 	width: 470px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.footer {
+	margin-top: 20px;
+}
+
+.readme {
+	color: blue;
+	text-decoration: underline;
 }
 
 .col-1 {
