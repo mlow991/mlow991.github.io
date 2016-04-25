@@ -11,6 +11,7 @@
 
 .r-value {
 	display: none;
+	color: green;
 }
 
 #calc, #add, .readme {
