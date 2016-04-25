@@ -1,5 +1,6 @@
 var count = 0;
 var result;
+var readmeActive = false;
 
 function calc(x, y, range) {
 	if(y == 0) {
@@ -119,5 +120,22 @@ $(document).ready(function() {
 			$('.num-amount').css('display', 'initial');
 		}
 	});
+
+	$('.readme').click(function() {
+		if(!readmeActive) {
+			readmeActive = true;
+			$('.readme-text').css('display', 'initial');
+			$('.dropdown-triangle').css('border-top', '6px solid gray');
+			$('.dropdown-triangle').css('border-bottom', '6px solid transparent');
+			$('.dropdown-triangle').css('margin-top', '7px');
+		} else {
+			readmeActive = false;
+			$('.readme-text').css('display', 'none');
+			$('.dropdown-triangle').css('border-top', '6px solid transparent');
+			$('.dropdown-triangle').css('border-bottom', '6px solid gray');
+			$('.dropdown-triangle').css('margin-top', '0');
+		}
+	});
+
 	console.log('app loaded');
 });

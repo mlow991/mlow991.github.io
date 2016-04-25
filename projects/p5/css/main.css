@@ -17,8 +17,22 @@
 	cursor: pointer;
 }
 
+.dropdown-triangle {
+	border-left: 6px solid transparent;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid gray;
+	border-right: 6px solid transparent;
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
 p {
 	text-indent: 20px;
+}
+
+h2 {
+	font-size: 20px;
 }
 
 body {

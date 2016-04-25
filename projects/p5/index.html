@@ -33,13 +33,26 @@
 		<span class="result">Result: <span><span class="r-value"></span>
 	</div>
 	<div class="footer">
-		<span class="readme" title="How the calculator works">Calculator Readme</span>
-		<p class="readme-text">
-			The calculator accepts up to 2 numbers to calculate the sum of multiples.  You can also specify the non-inclusive range of multiples.
-
-			The calculator uses JavaScript to calculate the sum of all multiples.  Exceptions such as non-numbers, invalid ranges, and empty input fields are taken into account.  When an exception is caught, a warning message is displayed to the user.
-			Once all input fields are valid, the calculator simply loops through the range and adds every multiple within the range to the grand total.
-		</p>
+		<span class="readme" title="How the calculator works">Calculator Readme</span><span class="dropdown-triangle"></span><br>
+		<div class="readme-text">
+			<h2>How to Operate</h2>
+			<ul>
+				<li>Input value into the 'Number' field</li>
+				<li>[Optional] To add another value (2 max) press the plus button</li>
+				<li>Specify the range</li>
+				<li>Press the calculate button to view result</li>
+			</ul>
+			<h2>How it Works</h2>
+			<p>
+				The calculator accepts up to 2 numbers to calculate the sum of multiples. Plain JavaScript and jQuery are used to calculate the sum of all multiples within the specified range.
+			</p>
+			<p>
+				Exceptions such as non-numbers, invalid ranges, and empty input fields are taken into account.  When an exception is caught, a warning message is displayed to the user.  Once all input fields are valid, the calculator simply loops through the range and adds every multiple within the range to the grand total.
+			</p>
+			<p>
+				In the case of two numbers provided by the user: If a number within the range is a multiple of both numbers, then it only added once to the total.
+			</p>
+		</div>
 	</div>
 
 </body>
