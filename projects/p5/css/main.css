@@ -36,6 +36,10 @@ body {
 	text-decoration: underline;
 }
 
+.readme-text {
+	display: none;
+}
+
 .col-1 {
 	width: 8.33%;
 }
