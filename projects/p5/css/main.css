@@ -3,3 +3,12 @@
 	margin-left: 20px;
 	display: none;
 }
+
+.result {
+	font-weight: bold;
+	display: none;
+}
+
+.r-value {
+	display: none;
+}

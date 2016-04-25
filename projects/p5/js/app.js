@@ -94,9 +94,19 @@ $(document).ready(function() {
 		if(calculate == 4) {
 			if(number != 0 && number2 != 0) {
 				calc(number, number2, range);
+			} else if(number != 0 && number2 == 0) {
+				calc(number, 0, range);
+			} else if(number == 0 && number2 != 0) {
+				calc(number2, 0, range);
 			} else {
 				result = 0;
 			}
+		}
+
+		if(calculate == 3 || calculate ==4) {
+			$('.result').css('display', 'initial');
+			$('.r-value').css('display', 'initial');
+			$('.r-value').html(result);
 		}
 
 	});
