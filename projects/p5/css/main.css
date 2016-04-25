@@ -70,3 +70,9 @@ body {
 .col-12 {
 	width: 100%;
 }
+
+@media screen and (max-width: 470px) {
+	body {
+		width: 95%;
+	}
+}
