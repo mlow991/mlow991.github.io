@@ -46,10 +46,9 @@ $(document).ready(function() {
 		// The values are kept in string form to check to see if they
 		// are empty.
 		var number = $('#num').val();
+		var range = [];
 		range[0] = $('#lbound').val();
 		range[1] = $('#ubound').val();
-
-		var range = [];
 
 		// This variable is used to keep track of all exceptions.
 		// The calculator will not proceed with a calculation if
